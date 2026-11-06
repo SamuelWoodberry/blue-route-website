@@ -1,0 +1,18 @@
+# Netlify build settings for Blue Route Logistics
+[build]
+  command = "python3 build.py"
+  publish = "dist"
+
+# Old or mistyped URLs that people commonly guess
+[[redirects]]
+  from = "/quote"
+  to = "/request-a-quote/"
+  status = 301
+[[redirects]]
+  from = "/about-us"
+  to = "/about/"
+  status = 301
+[[redirects]]
+  from = "/contact-us"
+  to = "/contact/"
+  status = 301

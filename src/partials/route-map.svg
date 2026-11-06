@@ -1,0 +1,27 @@
+<svg class="route-map" data-animate viewBox="0 0 470 600" role="group" aria-labelledby="map-title map-desc" xmlns="http://www.w3.org/2000/svg">
+  <title id="map-title">Blue Route Logistics service area map</title>
+  <desc id="map-desc">Simplified map of Florida's Treasure Coast showing the four cities we serve: Fort Pierce, Port St. Lucie, Jensen Beach and Stuart, between the Indian River Lagoon and the Atlantic Ocean.</desc>
+  <defs>
+    <radialGradient id="map-fade-g" cx="50%" cy="50%" r="62%">
+      <stop offset="62%" stop-color="#fff"/><stop offset="100%" stop-color="#000"/>
+    </radialGradient>
+    <mask id="map-fade" maskUnits="userSpaceOnUse" x="0" y="0" width="470" height="600">
+      <rect width="470" height="600" fill="url(#map-fade-g)"/>
+    </mask>
+  </defs>
+  <g class="map-geo" aria-hidden="true" mask="url(#map-fade)">
+    <path class="map-land" d="M166.2 0.0 C170.4 13.0 184.3 54.2 191.6 78.0 C198.9 101.8 204.9 125.7 210.1 143.0 C215.3 160.3 217.2 166.8 222.8 182.0 C228.4 197.2 235.3 214.5 243.6 234.0 C251.9 253.5 264.1 279.5 272.4 299.0 C280.7 318.5 286.3 333.7 293.2 351.0 C300.1 368.3 307.8 386.8 314.0 403.0 C320.2 419.2 326.0 437.7 330.2 448.5 C334.4 459.3 335.2 458.2 339.4 468.0 C343.6 477.8 349.1 491.8 355.6 507.0 C362.1 522.2 372.1 543.8 378.6 559.0 C385.1 574.2 392.1 591.5 394.8 598.0 L0 600 L0 0 Z"/>
+    <path class="map-island" d="M189.3 0.0 C193.2 8.7 204.1 33.6 212.4 52.0 C220.7 70.4 236.7 100.8 239.0 110.5 C241.3 120.2 232.9 120.2 226.3 110.5 C219.8 100.8 208.0 70.4 199.7 52.0 C191.4 33.6 180.4 8.7 176.6 0.0 Z"/>
+    <path class="map-island" d="M243.6 127.4 C249.9 140.8 268.6 179.4 281.7 208.0 C294.8 236.6 310.6 270.8 322.1 299.0 C333.6 327.2 341.3 348.8 350.9 377.0 C360.5 405.2 372.3 445.9 379.8 468.0 C387.3 490.1 395.4 502.7 396.0 509.6 C396.6 516.5 388.1 516.5 383.3 509.6 C378.5 502.7 374.6 490.1 367.1 468.0 C359.6 445.9 347.8 405.2 338.2 377.0 C328.6 348.8 320.9 327.2 309.4 299.0 C297.9 270.8 282.1 236.6 269.0 208.0 C255.9 179.4 237.2 140.8 230.9 127.4 Z"/>
+    <path class="map-island" d="M401.7 520.0 C404.6 526.5 413.4 546.0 419.0 559.0 C424.6 572.0 434.6 591.5 435.2 598.0 C435.8 604.5 427.3 604.5 422.5 598.0 C417.7 591.5 411.9 572.0 406.3 559.0 C400.7 546.0 391.9 526.5 389.0 520.0 Z"/>
+    <path class="map-river" d="M337.1 464.1 C331.9 465.6 315.5 472.6 305.9 473.2 C296.3 473.8 288.4 473.2 279.4 468.0 C270.4 462.8 260.8 452.8 251.7 442.0 C242.6 431.2 232.8 416.0 225.1 403.0 C217.4 390.0 211.8 377.0 205.5 364.0 C199.2 351.0 192.8 339.1 187.0 325.0 C181.2 310.9 173.6 287.1 170.9 279.5"/>
+    <path class="map-river" d="M282.8 471.9 C281.4 477.8 278.0 493.6 274.7 507.0 C271.4 520.4 265.1 544.9 263.2 552.5"/>
+    <path class="map-coast" d="M166.2 0.0 C170.4 13.0 184.3 54.2 191.6 78.0 C198.9 101.8 204.9 125.7 210.1 143.0 C215.3 160.3 217.2 166.8 222.8 182.0 C228.4 197.2 235.3 214.5 243.6 234.0 C251.9 253.5 264.1 279.5 272.4 299.0 C280.7 318.5 286.3 333.7 293.2 351.0 C300.1 368.3 307.8 386.8 314.0 403.0 C320.2 419.2 326.0 437.7 330.2 448.5 C334.4 459.3 335.2 458.2 339.4 468.0 C343.6 477.8 349.1 491.8 355.6 507.0 C362.1 522.2 372.1 543.8 378.6 559.0 C385.1 574.2 392.1 591.5 394.8 598.0"/>
+    <text class="map-water" x="363.6" y="247.0" transform="rotate(-62 363.6 247.0)">Atlantic Ocean</text>
+    <text class="map-water map-water--small" x="274.7" y="240.5" transform="rotate(-58 274.7 240.5)">Indian River Lagoon</text>
+  </g>
+  <g class="map-north" aria-hidden="true" transform="translate(420 60)"><path d="M0 -14 L6 6 L0 2 L-6 6 Z"/><text y="22" text-anchor="middle">N</text></g>
+  <path class="map-route map-route--base" d="M192.8 147.3 C162.8 227.3 203.7 283.1 163.7 373.1 C143.7 413.1 225.39999999999998 461.2 285.4 471.2 C325.4 479.2 290.1 437.1 300.1 397.1" aria-hidden="true"/>
+  <path class="map-route map-route--draw" d="M192.8 147.3 C162.8 227.3 203.7 283.1 163.7 373.1 C143.7 413.1 225.39999999999998 461.2 285.4 471.2 C325.4 479.2 290.1 437.1 300.1 397.1" pathLength="1" aria-hidden="true"/>
+  <a class="map-node" href="{{root}}service-areas/#fort-pierce" aria-label="Fort Pierce service area details"><circle class="map-node__dot" cx="192.8" cy="147.3" r="6"/><text class="map-node__label" x="208.8" y="152.3" text-anchor="start">Fort Pierce</text></a><a class="map-node map-node--home" href="{{root}}service-areas/#port-st-lucie" aria-label="Port St. Lucie service area details"><circle class="map-node__halo" cx="163.7" cy="373.1" r="16"/><circle class="map-node__dot" cx="163.7" cy="373.1" r="8"/><text class="map-node__label" x="147.7" y="378.1" text-anchor="end">Port St. Lucie</text><text class="map-node__sub" x="147.7" y="395.1" text-anchor="end">Home base</text></a><a class="map-node" href="{{root}}service-areas/#jensen-beach" aria-label="Jensen Beach service area details"><circle class="map-node__dot" cx="300.1" cy="397.1" r="6"/><text class="map-node__label" x="316.1" y="402.1" text-anchor="start">Jensen Beach</text></a><a class="map-node" href="{{root}}service-areas/#stuart" aria-label="Stuart service area details"><circle class="map-node__dot" cx="285.4" cy="471.2" r="6"/><text class="map-node__label" x="269.4" y="476.2" text-anchor="end">Stuart</text></a>
+</svg>

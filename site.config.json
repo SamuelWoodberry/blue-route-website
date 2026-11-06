@@ -1,0 +1,50 @@
+{
+  "_README": "Edit this file to update business details site-wide. Any value left empty (\"\") is hidden on the public site, never faked. After editing, redeploy (Netlify rebuilds automatically when connected to Git, or run: python3 build.py).",
+
+  "site_url": "https://blueroute.us.com",
+  "_site_url_note": "CONFIRM: you wrote 'blue route.us.com'. Domains cannot contain spaces, so this assumes blueroute.us.com. Change it if your domain is different (e.g. blue-route.us.com).",
+
+  "business_name": "Blue Route Logistics",
+  "legal_name": "",
+  "_legal_name_note": "Exact name on your Florida LLC filing, e.g. 'Blue Route Logistics LLC'. Used in the Privacy Policy, Terms and copyright line.",
+
+  "city": "Port St. Lucie",
+  "state": "FL",
+  "region_name": "Florida's Treasure Coast",
+
+  "phone_display": "",
+  "phone_e164": "",
+  "_phone_note": "phone_display is what visitors see, e.g. '(772) 555-0100'. phone_e164 is the same number for tap-to-call, e.g. '+17725550100'.",
+
+  "email": "",
+  "_email_note": "Public business email, e.g. dispatch@blueroute.us.com. Also set the same address for form notifications in Netlify.",
+
+  "hours": [],
+  "_hours_example": [
+    {"days": "Monday – Friday", "time": "8:00 AM – 6:00 PM", "schema_days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"], "opens": "08:00", "closes": "18:00"}
+  ],
+
+  "social": {
+    "linkedin": "",
+    "facebook": "",
+    "google_business_profile": "",
+    "instagram": ""
+  },
+
+  "analytics": {
+    "plausible_domain": "",
+    "_note": "Optional privacy-friendly analytics. Set to your domain (e.g. blueroute.us.com) after creating a Plausible account. Leave empty for no analytics."
+  },
+
+  "google_site_verification": "",
+  "_google_site_verification_note": "Only needed if you verify Search Console with the HTML-tag method. DNS verification (recommended) doesn't need this.",
+
+  "policy_effective_date": "",
+  "_policy_effective_date_note": "Date your Privacy Policy and Terms take effect, e.g. 'January 5, 2027'. Have both reviewed by a Florida attorney before launch.",
+
+  "testimonials": [],
+  "_testimonials_example": [
+    {"approved": false, "quote": "Real customer quote goes here, used only with written permission.", "name": "Customer name", "role": "Title, Organization"}
+  ],
+  "_testimonials_note": "The testimonial section stays hidden until at least one entry has \"approved\": true. Add only genuine feedback you have written permission to publish."
+}

@@ -1,0 +1,169 @@
+<!--meta {
+  "title": "Request a Free Courier Quote | Blue Route Logistics",
+  "description": "Request a free, customized quote for pharmacy delivery, medical supply transportation or a dedicated courier route on Florida's Treasure Coast.",
+  "priority": "0.9"
+} -->
+<section class="page-hero" aria-labelledby="page-h">
+  <div class="container">
+    <ol class="breadcrumb" aria-label="Breadcrumb"><li><a href="{{root}}">Home</a></li><li aria-current="page">Request a Quote</li></ol>
+    <h1 id="page-h" class="h1">Request a free quote</h1>
+    <p class="lead">Tell us about your deliveries and we'll prepare a proposal based on your route, volume and schedule. It takes about three minutes, and there's no obligation.</p>
+  </div>
+</section>
+
+<section class="section section--tint" aria-label="Quote request form">
+  <div class="container form-layout">
+    <div class="form-card">
+      <form class="form" name="quote" method="POST" action="{{root}}thank-you/" data-form data-success="quote-success"
+            data-netlify="true" netlify-honeypot="bot-field" data-fallback="{{contact_fallback_attr}}">
+        <input type="hidden" name="form-name" value="quote">
+        <p class="hp-field" aria-hidden="true"><label>Leave this field empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+
+        <div class="form-status form-status--error" data-form-status role="alert" tabindex="-1"></div>
+
+        {% include phi-note.html %}
+
+        <fieldset>
+          <legend>About your business</legend>
+          <div class="form-grid">
+            <div class="field">
+              <label for="q-name">Full name<span class="req" aria-hidden="true">*</span></label>
+              <input id="q-name" name="name" type="text" autocomplete="name" required maxlength="100" aria-describedby="q-name-error">
+              <span class="field__error" id="q-name-error"></span>
+            </div>
+            <div class="field">
+              <label for="q-company">Company or pharmacy name<span class="req" aria-hidden="true">*</span></label>
+              <input id="q-company" name="company" type="text" autocomplete="organization" required maxlength="150" aria-describedby="q-company-error">
+              <span class="field__error" id="q-company-error"></span>
+            </div>
+            <div class="field">
+              <label for="q-email">Business email<span class="req" aria-hidden="true">*</span></label>
+              <input id="q-email" name="email" type="email" autocomplete="email" required maxlength="150" aria-describedby="q-email-error">
+              <span class="field__error" id="q-email-error"></span>
+            </div>
+            <div class="field">
+              <label for="q-phone">Phone number<span class="req" aria-hidden="true">*</span></label>
+              <input id="q-phone" name="phone" type="tel" autocomplete="tel" required maxlength="30" aria-describedby="q-phone-error">
+              <span class="field__error" id="q-phone-error"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Your delivery needs</legend>
+          <div class="form-grid">
+            <div class="field">
+              <label for="q-service">Type of service needed<span class="req" aria-hidden="true">*</span></label>
+              <select id="q-service" name="service" required aria-describedby="q-service-error" data-label="a type of service">
+                <option value="">Select a service</option>
+                <option value="Pharmacy Delivery" data-key="pharmacy">Pharmacy Delivery</option>
+                <option value="Medical Supply Delivery" data-key="medical-supply">Medical Supply Delivery</option>
+                <option value="Dedicated Courier Route" data-key="dedicated">Dedicated Courier Route</option>
+                <option value="Other Commercial Delivery" data-key="other">Other Commercial Delivery</option>
+              </select>
+              <span class="field__error" id="q-service-error"></span>
+            </div>
+            <div class="field">
+              <label for="q-pickup">Pickup city<span class="req" aria-hidden="true">*</span></label>
+              <input id="q-pickup" name="pickup_city" type="text" required maxlength="80" autocomplete="address-level2" aria-describedby="q-pickup-hint q-pickup-error">
+              <span class="hint" id="q-pickup-hint">City only. No street address needed yet.</span>
+              <span class="field__error" id="q-pickup-error"></span>
+            </div>
+            <div class="field">
+              <label for="q-area">Delivery service area<span class="req" aria-hidden="true">*</span></label>
+              <select id="q-area" name="delivery_area" required aria-describedby="q-area-error" data-label="a delivery area">
+                <option value="">Select an area</option>
+                <option value="Port St. Lucie" data-key="port-st-lucie">Port St. Lucie</option>
+                <option value="Fort Pierce" data-key="fort-pierce">Fort Pierce</option>
+                <option value="Stuart" data-key="stuart">Stuart</option>
+                <option value="Jensen Beach" data-key="jensen-beach">Jensen Beach</option>
+                <option value="Multiple areas">Multiple areas</option>
+                <option value="Other / not sure">Other or not sure</option>
+              </select>
+              <span class="field__error" id="q-area-error"></span>
+            </div>
+            <div class="field">
+              <label for="q-schedule">Expected delivery schedule<span class="req" aria-hidden="true">*</span></label>
+              <select id="q-schedule" name="schedule" required aria-describedby="q-schedule-error" data-label="a delivery schedule">
+                <option value="">Select a schedule</option>
+                <option>Weekdays (Mon–Fri)</option>
+                <option>Weekdays and Saturday</option>
+                <option>Specific days each week</option>
+                <option>Same-day / as needed</option>
+                <option>Not sure yet</option>
+              </select>
+              <span class="field__error" id="q-schedule-error"></span>
+            </div>
+            <div class="field">
+              <label for="q-deliveries">Estimated daily deliveries<span class="req" aria-hidden="true">*</span></label>
+              <input id="q-deliveries" name="daily_deliveries" type="number" inputmode="numeric" min="0" max="10000" step="1" required aria-describedby="q-deliveries-hint q-deliveries-error">
+              <span class="hint" id="q-deliveries-hint">A rough average is fine.</span>
+              <span class="field__error" id="q-deliveries-error"></span>
+            </div>
+            <div class="field">
+              <label for="q-mileage">Estimated daily mileage</label>
+              <input id="q-mileage" name="daily_mileage" type="number" inputmode="numeric" min="0" max="10000" step="1" aria-describedby="q-mileage-hint q-mileage-error">
+              <span class="hint" id="q-mileage-hint">Optional. Leave blank if you're not sure.</span>
+              <span class="field__error" id="q-mileage-error"></span>
+            </div>
+            <div class="field">
+              <label for="q-start">Preferred start date</label>
+              <input id="q-start" name="start_date" type="date" aria-describedby="q-start-hint q-start-error">
+              <span class="hint" id="q-start-hint">Optional.</span>
+              <span class="field__error" id="q-start-error"></span>
+            </div>
+            <div class="field full">
+              <label for="q-details">Additional details</label>
+              <textarea id="q-details" name="details" maxlength="2000" aria-describedby="q-details-hint q-details-error"></textarea>
+              <span class="hint" id="q-details-hint">Pickup windows, number of stops, special handling questions, current courier arrangements. No patient information, please.</span>
+              <span class="field__error" id="q-details-error"></span>
+            </div>
+          </div>
+        </fieldset>
+
+        <div class="field check">
+          <input id="q-ack" name="no_patient_info" type="checkbox" value="Confirmed" required aria-describedby="q-ack-error">
+          <label for="q-ack">I confirm this request contains no patient or protected health information.</label>
+        </div>
+        <span class="field__error" id="q-ack-error"></span>
+
+        <div class="form__submit mt-2">
+          <button class="btn btn--primary btn--lg" type="submit" data-idle="Request My Free Quote">
+            <span class="spinner" aria-hidden="true"></span><span data-label>Request My Free Quote</span>
+          </button>
+          <p>We use your details only to respond to this request. See our <a href="{{root}}privacy-policy/">Privacy Policy</a>.</p>
+        </div>
+      </form>
+
+      <div class="form-success" id="quote-success" hidden>
+        <div class="form-success__icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></div>
+        <h2>Quote request received</h2>
+        <p>Thank you. Your request has been sent to Blue Route Logistics.</p>
+        <p><strong>What happens next:</strong></p>
+        <ol>
+          <li>We review your delivery locations, volume and schedule.</li>
+          <li>We contact you by email or phone to ask any follow-up questions.</li>
+          <li>We send you a customized proposal.</li>
+        </ol>
+        <a class="btn btn--outline" href="{{root}}services/">Back to services</a>
+      </div>
+    </div>
+
+    <aside aria-label="About your quote">
+      <div class="aside-card aside-card--navy">
+        <h2>What happens next</h2>
+        <ol>
+          <li>We review your route details.</li>
+          <li>We follow up to ask any questions.</li>
+          <li>You receive a tailored proposal.</li>
+          <li>Service starts once agreements and insurance are confirmed.</li>
+        </ol>
+      </div>
+      <div class="aside-card">
+        <h2>Prefer to talk first?</h2>
+        <p>Questions before you request a quote? Reach out on our <a href="{{root}}contact/">contact page</a>.</p>
+        {{contact_list}}
+      </div>
+    </aside>
+  </div>
+</section>

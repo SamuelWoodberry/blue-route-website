@@ -1,0 +1,34 @@
+<footer class="footer">
+  <div class="container footer__grid">
+    <div class="footer__brand">
+      <img src="{{root}}img/logo-white.svg" alt="Blue Route Logistics" width="200" height="48">
+      <p>Locally operated pharmacy courier, medical supply delivery and dedicated route services for healthcare businesses on Florida's Treasure Coast.</p>
+      {{social_links}}
+    </div>
+    <nav class="footer__col" aria-label="Footer">
+      <h2 class="footer__h">Company</h2>
+      <ul>
+        <li><a href="{{root}}">Home</a></li>
+        <li><a href="{{root}}about/">About Us</a></li>
+        <li><a href="{{root}}services/">Services</a></li>
+        <li><a href="{{root}}request-a-quote/">Request a Quote</a></li>
+        <li><a href="{{root}}contact/">Contact Us</a></li>
+      </ul>
+    </nav>
+    <nav class="footer__col" aria-label="Service areas">
+      <h2 class="footer__h">Service areas</h2>
+      <ul>{{footer_city_links}}</ul>
+    </nav>
+    <div class="footer__col">
+      <h2 class="footer__h">Contact</h2>
+      {{footer_contact}}
+    </div>
+  </div>
+  <div class="container footer__base">
+    <p>&copy; {{year}} {{legal_name}}. All rights reserved.</p>
+    <ul>
+      <li><a href="{{root}}privacy-policy/">Privacy Policy</a></li>
+      <li><a href="{{root}}terms-of-use/">Terms of Use</a></li>
+    </ul>
+  </div>
+</footer>

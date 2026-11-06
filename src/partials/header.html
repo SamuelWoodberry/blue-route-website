@@ -1,0 +1,22 @@
+<header class="header" data-header>
+  <div class="container header__inner">
+    <a class="header__logo" href="{{root}}" aria-label="Blue Route Logistics home">
+      <img src="{{root}}img/logo.svg" alt="" width="200" height="48">
+    </a>
+    <nav class="nav" aria-label="Main">
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
+        <span class="nav__toggle-bars" aria-hidden="true"></span>
+        <span class="nav__toggle-text">Menu</span>
+      </button>
+      <div class="nav__menu" id="nav-menu" data-nav-menu>
+        <ul class="nav__list">
+          {{nav_items}}
+        </ul>
+        <div class="nav__actions">
+          {{header_phone}}
+          <a class="btn btn--primary" href="{{root}}request-a-quote/"{{quote_current}}>Get a Free Quote</a>
+        </div>
+      </div>
+    </nav>
+  </div>
+</header>
